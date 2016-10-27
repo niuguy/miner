@@ -50,8 +50,8 @@ class LintCode():
 		#  获取csrf token
 		csrfmiddlewaretoken = re.findall("name='csrfmiddlewaretoken' value='([\S\s]*?)'",r.text)[0]
 		print 'csrf', csrfmiddlewaretoken
-		username_or_email = 'tf.wang.seu@gmail.com'
-		password = 'tianfengNo1'
+		username_or_email = '***'
+		password = '***'
 		login_data = {'csrfmiddlewaretoken': csrfmiddlewaretoken, 'username_or_email':username_or_email, 'password':password}
 		r = _session.post(_login_url, data = login_data, headers = headers, verify = True)
 		if r.status_code == requests.codes.ok:
